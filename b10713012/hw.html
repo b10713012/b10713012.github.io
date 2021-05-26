@@ -1,0 +1,50 @@
+ <!DOCTYPE HTML>
+<html>
+
+<head>
+<center>
+	<script type="text/javascript">
+				function myTime(){
+					var DateDay=new Date();
+					var hours=DateDay.getHours(); //獲取時間的小時
+					var minutes=DateDay.getMinutes();//獲取時間的分鐘
+					var second=DateDay.getSeconds(); //獲取時間的秒數
+					minutes=checkeds(minutes);
+					second=checkeds(second);
+					document.getElementById('div1').innerHTML=+hours+'時'+minutes+'分'+second+'秒';
+					setTimeout('myTime()',1000);
+				}				
+				function checkeds(value){
+					if(value<10){
+						value='0'+value;
+					}
+					return value;
+				}
+			
+	</script>
+	<body onload="myTime();">
+		<div id="div1"></div>
+	</body>
+</head>
+
+
+
+<body>
+	<hr>
+	<center>
+	<h2 id='bt2'> Welcome TYW restaurant  </h2>
+	<img src="1.jpg" width="50%">
+	<img src="2.jpg" width="50%">
+	<img src="3.jpg" width="50%">
+	<br>
+	</hr>
+	<font face="monospace" size="5">
+	<p style="text-indent:-8em">HP 15.6吋高效能筆電 #130414</p>
+	<p style="text-indent:-1.5em">價格: 37499元  折價: 1000元 特價: 36499元</p>
+	<p style="text-indent:-3em">SUTTON PLACE 記憶綿坐墊二入組 #120945</p>
+	<p style="text-indent:-4.5em">價格: 575元  折價: 100元 特價: 475元</p>
+	<p style="text-indent:3em">AMOS 玻璃彩繪組27件*2(含顏料/著色片/畫冊) #129347</p>
+	<p style="text-indent:-4.5em">價格: 559元  折價: 160元 特價: 399元</p>
+	</font>
+</body>
+</html>

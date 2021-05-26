@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">			
+			   var alldata = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"
+			    var arr = alldata.split(",");
+			    var num = arr.length - 1;  //獲取陣列最大索引
+			    var timer;    // 用來儲存定時器
+				function start(){
+					timer=setInterval('change()',50);
+				}
+				function change(){
+					document.getElementById('oknum').innerHTML=arr[value(0,num)]
+				}
+				//外部的函式建立隨機的值,然後進行返回
+				function value(min,max){
+					return parseInt(Math.random()*num);  //返回隨機產生的索引
+				}
+				//實現停止的函式
+				function ok(){
+					clearInterval(timer);
+					document.getElementById('showresult').value=document.getElementById('oknum').innerHTML;
+					
+				}
+		</script>
+	</head>
+	<body>
+	    <div id="oknum" name="oknum" >請單擊開始抽獎</div>
+	     <!--accesskey 屬性規定啟用（使元素獲得焦點）元素的快捷鍵shift+alt+accesskey-->
+	    <button onclick="start()" accesskey="s">開始</button>
+	    <button onclick="ok()" accesskey="o">停止</button> 
+        <br/>
+	    您的選擇是： 
+	    <input type="text" id="showresult" value=""/>
+	</body>
+</html>

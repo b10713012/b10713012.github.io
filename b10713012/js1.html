@@ -1,0 +1,30 @@
+<p id=demo> watch me!</p>
+<button type="button"
+	onclick="document.getElementById('demo').innerHTML=Date()">
+	顯示日期時間
+</button>
+<button type="button"
+	onclick="document.getElementById('demo').innerHTML='雙臉變臉我要變臉'">
+	點我變臉
+</button>
+<button type="button"
+	onclick="document.getElementById('demo').innerHTML='<font color=red>雙臉變臉我要變臉</font>'">
+	點我變紅
+</button>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">big big</button>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='24px'">small small</button>
+<button onclick="document.getElementById('demo').style.display='none'">隱藏</button>
+<button onclick="document.getElementById('demo').style.display='block'">SHOW ME!</button>
+
+<button type="button" onclick="document.write(1+2+3+4+5)"> 計算 1+2+3+4+5=</button>
+
+<script>
+	function myFunction()
+	{	window.alert("功能展示");
+		document.getElementById("demo").innerHTML = "Hello ! How are you?";
+	}
+</script>
+
+<button onclick="myFunction()">Function demo. 按我!</button>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var n=0;
+			function load(){
+				
+				//建立一個數組用來儲存你要列印的一個字元
+				var arr= ['你','若','不','離','不','棄','我','必','生','死','相','依'];
+				var div=document.getElementById('div1');
+				div.innerHTML+=arr[n];
+				n++;
+				var timer=setTimeout('load()',500);
+				if(n>=arr.length){
+					clearTimeout(timer);
+					var timer1=setInterval('span()',500);
+				}
+			}
+			function span(){
+				var span1= document.getElementById('span1');
+				if(span1.style.display=='block'){
+					span1.style.display='none';
+				}else{
+					span1.style.display='block';
+				}
+			}
+		</script>
+	</head>
+	<body onload='load();'>
+		  <div id="div1" style="float: left; font-family: 楷體;"></div>
+        	<span id="span1">
+        		<label style="color: red; font-size: 15px; font-family: 楷體;">|		</label>
+        	</span>
+		
+	</body>
+</html>
